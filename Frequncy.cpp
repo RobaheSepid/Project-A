@@ -5,40 +5,40 @@ int stoi (char c) { return c - '0'; }
 int main(){
     int i=0,j=0,l=1,n=0,z=0;
 	string nums;
-	cout << "Please Enter Number And Split Them With ',': \n";
+	cout << "Please Enter Numbers And Split Them With ',': \n";
 	cin >> nums;
 	int len= nums.length();
 	for(i=0;i<len;i++){//bugs hunt here
 		if(nums[i+1]==' '){
-			cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Have Space ' ' Between Your Numbers!\n";
+			cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Have Space ' ' Between Your Numbers!\n";
 	    	system("pause");
 	    	return 0;	
 		}
 		if (nums [0]==','){
-			cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Have ',' Insted of first number!\n";
+			cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Have ',' Insted of first number!\n";
 	    	system("pause");
 	    	return 0;
 		}
 		if (nums[i]>='0'&&nums[i]<='9'&&nums[i+1]=='-'){
-			cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Have Something Like This '1-1' Between Your Number!\n";
+			cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Have Something Like This '1-1' Between Your Numbers!\n";
 	    	system("pause");
 	    	return 0;}	
 		if (nums[i]=='-'&&nums[i+1]=='-'){
-			cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Have '--' Between Your Number!\n";
+			cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Have '--' Between Your Numbers!\n";
 	    	system("pause");
 	    	return 0;}
 		if (nums[i]==','&&nums[i+1]==','){
-	    	cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Have ',,' Between Your Number!\n";
+	    	cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Have ',,' Between Your Numbers!\n";
 	    	system("pause");
 	    	return 0;
 		}
 		if (!(nums[i]>='0'&&nums[i]<='9'||nums[i]==','||nums[i]=='-')){
-			cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Enter Incorrect Charcter Like:\n'a,A,~,etc'\n";
+			cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Enter Incorrect Charcter Like:\n'a,A,~,etc'\n";
 	    	system("pause");
 	    	return 0;	
 		}
 		if (nums[i]==','&&nums[i+1]=='\0'){
-			cout << "Please Enter Number Correctly!\nLike:\n1,2,3,4\nYou Have Something Like ', ,' Between In End Of Your Number\nReenter Your Number And Dont Enter ',' At End\n";
+			cout << "Please Enter Numbers Correctly!\nLike:\n1,2,3,4\nYou Have Something Like ', ,' Between Your Numbers Or In End You Have','\nReenter Your Numbers\n";
 	    	system("pause");
 	    	return 0;
 		}
